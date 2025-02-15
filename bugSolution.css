@@ -1,0 +1,20 @@
+/* bugSolution.css */
+
+/* Instead of relying on a percentage calculation where the parent width is not defined, explicitly set the parent width:
+   This ensures the calculation is based on a known value. */
+.container {
+  width: 500px;
+}
+
+.element {
+  width: calc(50% - 10px);
+  background-color: lightblue;
+}
+
+/* Alternative solution if you can't control the parent's width: Use a more robust approach with fixed units or a different calculation method*/
+.element2 {
+  width: 240px; /* Or adjust to a fixed value based on design requirements */
+  background-color: lightgreen;
+}
+
+/* Avoid overly complex calculations in calc() to reduce the likelihood of unexpected results. */
